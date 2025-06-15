@@ -1,8 +1,8 @@
 import { NestFactory } from '@nestjs/core';
-import { ProductSvcModule } from './product-svc.module';
+import { ApiGatewaySvcModule } from './api-gateway-svc.module';
 
 async function bootstrap() {
-  const app = await NestFactory.create(ProductSvcModule);
+  const app = await NestFactory.create(ApiGatewaySvcModule);
   await app.listen(process.env.port ?? 3000);
 }
 bootstrap();

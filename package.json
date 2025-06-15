@@ -17,12 +17,20 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./apps/nodejs-distributed-systems-lab/test/jest-e2e.json"
+    "test:e2e": "jest --config ./apps/nodejs-distributed-systems-lab/test/jest-e2e.json",
+    "start:dev:api-gateway-svc": "nest start api-gateway-svc --watch",
+    "start:dev:auth-svc": "nest start auth-svc --watch",
+    "start:dev:core-svc": "nest start core-svc --watch"
   },
   "dependencies": {
+    "@apollo/gateway": "^2.11.0",
+    "@apollo/subgraph": "^2.11.0",
     "@nestjs/common": "^10.0.0",
     "@nestjs/core": "^10.0.0",
+    "@nestjs/graphql": "^13.1.0",
     "@nestjs/platform-express": "^10.0.0",
+    "apollo-server": "^3.13.0",
+    "graphql": "^16.11.0",
     "reflect-metadata": "^0.2.0",
     "rxjs": "^7.8.1"
   },
